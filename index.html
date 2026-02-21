@@ -11,8 +11,20 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
-        .card-glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; }
+        .card-glass { 
+            background: rgba(30, 41, 59, 0.4); 
+            border: 1px solid rgba(255,255,255,0.05); 
+            transition: all 0.3s ease; 
+        }
         .card-glass:hover { border-color: #3b82f6; transform: translateY(-4px); }
+        
+        /* Efecto de movimiento de iconos de la versión 12:14am */
+        .icon-bounce { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-glass:hover .icon-bounce {
+            transform: scale(1.2) rotate(8deg);
+            color: #60a5fa;
+        }
+
         .gradient-text { background: linear-gradient(90deg, #60a5fa, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
@@ -36,7 +48,7 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <div class="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold mb-6 uppercase tracking-[0.2em]">
-                    Gilbert, Arizona | Mechatronics Engineer
+                    Based in Gilbert, Arizona | Mechatronics Engineer
                 </div>
                 <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
                     Streamlining <span class="gradient-text">Engineering</span> through AI.
@@ -99,7 +111,7 @@ edgar.optimize()</code></pre>
         </div>
     </section>
 
-    <!-- EXPERTISE -->
+    <!-- EXPERTISE CON ICONOS ANIMADOS -->
     <section id="expertise" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="mb-16">
@@ -107,23 +119,23 @@ edgar.optimize()</code></pre>
                 <div class="h-1 w-20 bg-blue-600"></div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-glass p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="cpu" class="text-blue-500"></i>
+                <div class="card-glass p-8 rounded-2xl group">
+                    <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 transition-colors">
+                        <i data-lucide="cpu" class="text-blue-500 icon-bounce"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">AI Integration</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Implementing AI-driven automation to reduce manual workload in report generation and interdepartmental data sharing.</p>
                 </div>
-                <div class="card-glass p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="layers" class="text-blue-500"></i>
+                <div class="card-glass p-8 rounded-2xl group">
+                    <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 transition-colors">
+                        <i data-lucide="layers" class="text-blue-500 icon-bounce"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">DFM & DFA</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Optimizing HVAC equipment layouts and manufacturing components for seamless assembly and cost reduction.</p>
                 </div>
-                <div class="card-glass p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="database" class="text-blue-500"></i>
+                <div class="card-glass p-8 rounded-2xl group">
+                    <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 transition-colors">
+                        <i data-lucide="database" class="text-blue-500 icon-bounce"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">CAD/CAM/CAE</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Expertise in SolidWorks (CSWP), CATIA V5, and NX12 for complex mechanical modeling and FEA simulation.</p>
@@ -146,7 +158,7 @@ edgar.optimize()</code></pre>
                         <span class="text-slate-600 text-[10px] font-mono">2021</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2 uppercase">Rotational Stage</h3>
-                    <p class="text-sm text-slate-400 mb-6">Engineered a rotational stage for professional film production (Dany Ocean, Mexico City).</p>
+                    <p class="text-sm text-slate-400 mb-4">Engineered a rotational stage for professional film production (Dany Ocean, Mexico City).</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-[9px] px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-500">Structural Design</span>
                         <span class="text-[9px] px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-500">Fabrication</span>
@@ -159,7 +171,7 @@ edgar.optimize()</code></pre>
                         <span class="text-slate-600 text-[10px] font-mono">2017</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2 uppercase">Inverted Pendulum</h3>
-                    <p class="text-sm text-slate-400 mb-6">PID-controlled system using microcontrollers and gyroscopes developed at UNAM.</p>
+                    <p class="text-sm text-slate-400 mb-4">PID-controlled system using microcontrollers and gyroscopes developed at UNAM.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-[9px] px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-500">PID Control</span>
                         <span class="text-[9px] px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-500">Embedded</span>
@@ -172,7 +184,7 @@ edgar.optimize()</code></pre>
                         <span class="text-slate-600 text-[10px] font-mono">2017</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2 uppercase">SAE Test Bench</h3>
-                    <p class="text-sm text-slate-400 mb-6">Suspension test bench simulating quarter-car loads for SAE Formula testing.</p>
+                    <p class="text-sm text-slate-400 mb-4">Suspension test bench simulating quarter-car loads for SAE Formula testing.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-[9px] px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-500">CAD/CAM</span>
                         <span class="text-[9px] px-2 py-1 bg-slate-900 rounded border border-slate-700 text-slate-500">FEA</span>
@@ -212,7 +224,7 @@ edgar.optimize()</code></pre>
                 <a href="https://github.com/ecuacuasrivera-hub" target="_blank" class="text-slate-400 hover:text-white transition"><i data-lucide="github"></i></a>
             </div>
         </div>
-    </footer>
+    </section>
 
     <script>
         lucide.createIcons();
